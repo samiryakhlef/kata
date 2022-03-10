@@ -8,6 +8,6 @@ class FizzbuzzTest extends TestCase
 {
     public function testFizzbuzz()
     {
-        self::assertTrue(false);
+        $this-> assertTrue(false);
     }
 };
