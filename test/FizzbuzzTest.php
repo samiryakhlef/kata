@@ -11,12 +11,12 @@ use PHPUnit\Framework\TestCase;
 
 class FizzbuzzTest extends TestCase
 {
-    public function testIsMultipleOf(){
+    public function testIsMultipleOf()
+    {
 
-        $this->assertTrue(isMultipleOf(3,3));
-        $this->assertTrue(isMultipleOf(6,3));
-        $this->assertTrue(isMultipleOf(10,5));
-
+        $this->assertTrue(isMultipleOf(3, 3));
+        $this->assertTrue(isMultipleOf(6, 3));
+        $this->assertTrue(isMultipleOf(10, 5));
     }
     public function testFizzbuzz()
     {
@@ -30,15 +30,12 @@ function fizzbuzz()
     $out = [];
     for ($i = 1; $i <= 6; $i++) {
 
-        if ($i === 3) {
+        if (isMultipleOf($i, 3)) {
             $out[] = 'fizz';
 
-        } else if ($i === 5) {
+        } else if (isMultipleOf($i, 5)) {
             $out[] = 'buzz';
-
-        } else if ($i === 6) {
-            $out[] = 'fizz';
-
+            
         } else {
             $out[] = $i;
         }
@@ -47,8 +44,8 @@ function fizzbuzz()
 }
 
 
-function isMultipleOf($nbr, $multiple){
+function isMultipleOf($nbr, $multiple)
+{
 
     return $nbr % $multiple === 0;
-
 }
