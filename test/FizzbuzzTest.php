@@ -7,10 +7,23 @@ namespace App;
 
 use PHPUnit\Framework\TestCase;
 
+
+
 class FizzbuzzTest extends TestCase
 {
     public function testFizzbuzz()
     {
-        $this->assertTrue(true);
+
+        $this->assertEquals('123', fizzbuzz());
     }
 };
+
+function fizzbuzz()
+{
+    $out = '';
+    for ($i = 1; $i <= 3; $i++) {
+        $out .= $i;
+    }
+    
+    return $out;
+}
