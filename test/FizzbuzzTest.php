@@ -38,3 +38,8 @@ function fizzbuzz()
     }
     return $out;
 }
+
+
+function isMultipleOf($nbr, $multiple){
+
+}
