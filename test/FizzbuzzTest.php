@@ -14,7 +14,7 @@ class FizzbuzzTest extends TestCase
     public function testFizzbuzz()
     {
 
-        $this->assertEquals([1, 2, 3, 4, 5], fizzbuzz());
+        $this->assertEquals([1, 2, 'fizz', 4, 'buzz'], fizzbuzz());
     }
 };
 
@@ -22,8 +22,16 @@ function fizzbuzz()
 {
     $out = [];
     for ($i = 1; $i <= 5; $i++) {
-        $out[] = $i;
-    }
 
+        if ($i === 3) {
+            $out[] = 'fizz';
+
+        } else if ($i === 5) {
+            $out[] = 'buzz';
+            
+        } else {
+            $out[] = $i;
+        }
+    }
     return $out;
 }
