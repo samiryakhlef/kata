@@ -14,16 +14,16 @@ class FizzbuzzTest extends TestCase
     public function testFizzbuzz()
     {
 
-        $this->assertEquals('123', fizzbuzz());
+        $this->assertEquals([1, 2, 3, 4, 5], fizzbuzz());
     }
 };
 
 function fizzbuzz()
 {
-    $out = '';
-    for ($i = 1; $i <= 3; $i++) {
-        $out .= $i;
+    $out = [];
+    for ($i = 1; $i <= 5; $i++) {
+        $out[] = $i;
     }
-    
+
     return $out;
 }
